@@ -3,13 +3,14 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/": "pages/index.js",
-  "/auth": "pages/auth.js",
+  "/tools": "pages/tools.js",
   "/tools/documents": "pages/tools/documents.js",
-  "/tools/free-ai-text": "pages/tools/free-ai-text.js",
-  "/tools/presentations": "pages/tools/presentations.js",
   "/tools/spreadsheets": "pages/tools/spreadsheets.js",
-  "/blog": "pages/blog.js",
   "/tools/voiceovers": "pages/tools/voiceovers.js",
-  "/tools/free-ai-email": "pages/tools/free-ai-email.js",
-  "/favorites": "pages/favorites.js"
+  "/tools/free-ai-voice": "pages/tools/free-ai-voice.js",
+  "/tools/chat": "pages/tools/chat.js",
+  "/tools/presentations": "pages/tools/presentations.js",
+  "/favorites": "pages/favorites.js",
+  "/blog": "pages/blog.js",
+  "/about": "pages/about.js"
 }

@@ -136,12 +136,15 @@ const ToolsIndex: NextPage = () => {
       color: "text-orange-600"
     }
   ];
+  
   return (
     <ToolsLayout>
       <Head>
         <title>AI Tools - All-in-One Productivity Suite</title>
         <meta name="description" content="Explore our suite of AI-powered tools for productivity and creativity" />
-      </Head>      <div className="container mx-auto px-4 py-8">
+      </Head>
+      
+      <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col items-center text-center mb-10">
           <h1 className="text-3xl font-bold mb-2">AI Tools Suite</h1>
           <p className="text-gray-600 max-w-2xl">
@@ -215,7 +218,8 @@ const ToolsIndex: NextPage = () => {
             ))}
           </div>
         </div>
-        </div>        <div className="mt-16 text-center">
+        
+        <div className="mt-16 text-center">
           <h2 className="text-2xl font-bold mb-4">Unlock More Features with Premium</h2>
           <p className="text-gray-600 max-w-2xl mx-auto mb-6">
             While our free tools provide great value, our premium tools offer advanced features, 
@@ -224,7 +228,8 @@ const ToolsIndex: NextPage = () => {
           <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 text-white">
             Upgrade to Premium
           </Button>
-        </div>      </div>
+        </div>
+      </div>
     </ToolsLayout>
   );
 };

@@ -93,17 +93,15 @@ const AboutPage = () => {
               </motion.div>
             </div>
 
-            <motion.div variants={fadeIn} className="mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Our Story</h2>
+            <motion.div variants={fadeIn} className="mb-16">              <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Our Story</h2>
               <div className="bg-white p-8 rounded-lg shadow-md">
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  CV Maker was founded with a simple goal: to help job seekers create professional CVs that get results. We recognized that many people struggle with formatting and designing their CVs, which can be a barrier to landing interviews.
+                  AIToolsSuite was founded with a simple goal: to help users leverage the power of AI for their creative and professional needs. We recognized that many people want to take advantage of AI technologies but find them complex or inaccessible.
                 </p>
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  Our team of HR professionals and design experts worked together to create a platform that combines beautiful design with practical advice on CV content. The result is a tool that makes it easy for anyone to create a CV that highlights their strengths and makes a great first impression.
-                </p>
-                <p className="text-gray-700 leading-relaxed">
-                  Today, CV Maker is used by thousands of job seekers around the world, and we are proud to have helped many of them land their dream jobs. We continue to improve our platform based on user feedback and the latest trends in hiring and recruitment.
+                  Our team of AI specialists and design experts worked together to create a platform that combines powerful AI capabilities with an intuitive user interface. The result is a suite of tools that makes it easy for anyone to create professional content with AI assistance.
+                </p>                <p className="text-gray-700 leading-relaxed">
+                  Today, AIToolsSuite is used by thousands of users around the world, and we are proud to have helped many of them create amazing content and solve complex problems. We continue to improve our platform based on user feedback and the latest advancements in AI technology.
                 </p>
               </div>
             </motion.div>

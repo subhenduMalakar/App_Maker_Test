@@ -27,10 +27,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/auth": [
+    "/about": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/auth.js"
+      "static/chunks/pages/about.js"
     ],
     "/blog": [
       "static/chunks/webpack.js",
@@ -42,20 +42,25 @@
       "static/chunks/main.js",
       "static/chunks/pages/favorites.js"
     ],
+    "/tools": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/tools.js"
+    ],
+    "/tools/chat": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/tools/chat.js"
+    ],
     "/tools/documents": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/tools/documents.js"
     ],
-    "/tools/free-ai-email": [
+    "/tools/free-ai-voice": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/tools/free-ai-email.js"
-    ],
-    "/tools/free-ai-text": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/tools/free-ai-text.js"
+      "static/chunks/pages/tools/free-ai-voice.js"
     ],
     "/tools/presentations": [
       "static/chunks/webpack.js",

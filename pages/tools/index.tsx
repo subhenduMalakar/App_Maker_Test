@@ -136,15 +136,12 @@ const ToolsIndex: NextPage = () => {
       color: "text-orange-600"
     }
   ];
-  
   return (
     <ToolsLayout>
       <Head>
         <title>AI Tools - All-in-One Productivity Suite</title>
         <meta name="description" content="Explore our suite of AI-powered tools for productivity and creativity" />
-      </Head>
-
-      <div className="container mx-auto px-4 py-8">
+      </Head>      <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col items-center text-center mb-10">
           <h1 className="text-3xl font-bold mb-2">AI Tools Suite</h1>
           <p className="text-gray-600 max-w-2xl">
@@ -152,89 +149,6 @@ const ToolsIndex: NextPage = () => {
             creativity, and workflow. From document creation to image generation, we've got you covered.
           </p>
         </div>
-
-        {/* Free AI Tools Section */}
-        <div className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 flex items-center">
-            <span className="text-yellow-500 mr-2">✨</span> Free AI Tools
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {freeTools.map((tool, index) => (
-              <Card key={index} className="overflow-hidden hover:shadow-md transition-shadow border-t-2 border-yellow-400">
-                <CardHeader className="pb-2">
-                  <div className="flex items-center gap-2">
-                    <tool.icon className={`h-5 w-5 ${tool.color}`} />
-                    <CardTitle>{tool.title}</CardTitle>
-                  </div>
-                  <CardDescription>{tool.description}</CardDescription>
-                </CardHeader>
-                <CardContent className="pb-2">
-                  <div className={`w-full h-32 flex items-center justify-center ${tool.color} bg-opacity-10 rounded-md mb-2`}>
-                    <tool.icon className={`h-16 w-16 ${tool.color} opacity-50`} />
-                  </div>
-                </CardContent>
-                <CardFooter>
-                  <Link href={tool.path} className="w-full">
-                    <Button variant="outline" className="w-full flex items-center justify-between">
-                      <span>Try Now</span>
-                      <ArrowRight className="h-4 w-4" />
-                    </Button>
-                  </Link>
-                </CardFooter>
-              </Card>
-            ))}
-          </div>
-        </div>
-
-        {/* Premium AI Tools Section */}
-        <div>
-          <h2 className="text-2xl font-bold mb-6 flex items-center">
-            <span className="text-purple-600 mr-2">⚡</span> Premium Tools
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {premiumTools.map((tool, index) => (
-              <Card key={index} className="overflow-hidden hover:shadow-md transition-shadow">
-                <CardHeader className="pb-2">
-                  <div className="flex items-center gap-2">
-                    <tool.icon className={`h-5 w-5 ${tool.color}`} />
-                    <CardTitle>{tool.title}</CardTitle>
-                  </div>
-                  <CardDescription>{tool.description}</CardDescription>
-                </CardHeader>
-                <CardContent className="pb-2">
-                  <div className={`w-full h-32 flex items-center justify-center ${tool.color} bg-opacity-10 rounded-md mb-2`}>
-                    <tool.icon className={`h-16 w-16 ${tool.color} opacity-50`} />
-                  </div>
-                </CardContent>
-                <CardFooter>
-                  <Link href={tool.path} className="w-full">
-                    <Button variant="outline" className="w-full flex items-center justify-between">
-                      <span>Open Tool</span>
-                      <ArrowRight className="h-4 w-4" />
-                    </Button>
-                  </Link>
-                </CardFooter>
-              </Card>
-            ))}
-          </div>
-        </div>
-
-        <div className="mt-16 text-center">
-          <h2 className="text-2xl font-bold mb-4">Unlock More Features with Premium</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto mb-6">
-            While our free tools provide great value, our premium tools offer advanced features, 
-            higher limits, and more customization options to help you achieve even better results.
-          </p>
-          <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 text-white">
-            Upgrade to Premium
-          </Button>
-        </div>
-      </div>
-    </ToolsLayout>
-  );
-};
-
-export default ToolsIndex;
 
         {/* Free AI Tools Section */}
         <div className="mb-12">

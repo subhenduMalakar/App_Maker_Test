@@ -1,0 +1,5 @@
+{
+  "loadingMessage": "Dummy loading message...",
+  "errorMessage": "Dummy error message: {error}",
+  "notFoundMessage": "Dummy page not found message."
+}

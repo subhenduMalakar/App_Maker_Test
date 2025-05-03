@@ -1,0 +1,28 @@
+
+{
+  "site": {
+    "title": "CV Maker Pro",
+    "description": "Build and manage professional resumes and CVs easily",
+    "baseUrl": "http://10.127.128.85:8080/",
+    "headerBackground": "bg-gradient-to-r from-blue-600 to-teal-500",
+    "logo": {
+      "text": "CV Maker Pro",
+      "image": ""
+    },
+    "footerText": "© 2025 CV Maker Pro. All rights reserved."
+  },  "features": {
+    "templates": ["Professional", "Creative", "Academic", "Modern", "Minimal"],
+    "exportFormats": ["PDF", "DOCX", "TXT"],
+    "itemsPerPage": 6,
+    "enableSave": true,
+    "enableShare": true,
+    "showRatingFilter": true,
+    "showFeaturesFilter": true
+  },
+  "socialLinks": {
+    "facebook": "https://facebook.com",
+    "twitter": "https://twitter.com",
+    "instagram": "https://instagram.com",
+    "linkedin": "https://linkedin.com"
+  }
+}

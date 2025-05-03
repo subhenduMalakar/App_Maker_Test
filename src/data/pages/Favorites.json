@@ -1,0 +1,9 @@
+{
+  "headerTitle": "Dummy Favorites Title",
+  "headerDescription": "Dummy description for the favorites page.",
+  "removeButtonText": "Dummy Remove Button Text",
+  "favoritesCountText": "You have {count} {count, plural, one {favorite} other {favorites}}",
+  "noFavoritesHeading": "Dummy No Favorites Heading",
+  "noFavoritesMessage": "Dummy message when there are no favorites.",
+  "exploreButtonText": "Dummy Explore Button Text"
+}

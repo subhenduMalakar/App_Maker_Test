@@ -1,0 +1,34 @@
+{
+  "headerTitle": "Dummy About Title",
+  "headerDescription": "Dummy header description about the directory.",
+  "missionTitle": "Dummy Mission Title",
+  "missionText": "Dummy mission statement text goes here. It explains the purpose and goals of the directory.",
+  "features": [
+    {
+      "title": "Dummy Feature 1 Title",
+      "description": "Dummy description for the first feature."
+    },
+    {
+      "title": "Dummy Feature 2 Title",
+      "description": "Dummy description for the second feature."
+    },
+    {
+      "title": "Dummy Feature 3 Title",
+      "description": "Dummy description for the third feature."
+    }
+  ],
+  "storyTitle": "Dummy Story Title",
+  "storyText": [
+    "Dummy paragraph 1 of the story. This section can contain multiple paragraphs.",
+    "Dummy paragraph 2 of the story. Explain the history and growth of the platform.",
+    "Dummy paragraph 3 of the story. Mention commitment to values and future plans."
+  ],
+  "contactTitle": "Dummy Contact Title",
+  "getInTouchSubtitle": "Dummy Get In Touch Subtitle",
+  "getInTouchDescription": "Dummy description for getting in touch.",
+  "email": "dummy.email@example.com",
+  "phone": "(123) 456-7890",
+  "address": "Dummy Address Line 1\nDummy Address Line 2",
+  "followUsSubtitle": "Dummy Follow Us Subtitle",
+  "followUsDescription": "Dummy description for following on social media."
+}

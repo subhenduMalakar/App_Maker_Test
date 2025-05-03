@@ -1,0 +1,316 @@
+import { v4 as uuidv4 } from 'uuid';
+import { CV, emptyCV } from '@/data/cvData';
+import { ExportFormat } from '@/types/exportTypes';
+
+// Import required libraries for export functionality
+import html2pdf from 'html2pdf.js';
+import { Document, Packer, Paragraph, HeadingLevel, AlignmentType } from 'docx';
+import html2canvas from 'html2canvas';
+import { saveAs } from 'file-saver';
+
+// Format date function for display
+export function formatDate(dateString: string): string {
+  if (!dateString) return '';
+  
+  try {
+    const date = new Date(dateString);
+    return new Intl.DateTimeFormat('en-US', { 
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric'
+    }).format(date);
+  } catch (e) {
+    return dateString;
+  }
+}
+
+// Create a new CV with default values
+export function createNewCV(userId: string, template = 'Professional'): CV {
+  return {
+    ...emptyCV,
+    id: uuidv4(),
+    userId,
+    template,
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+  };
+}
+
+// Create a slug from text
+export function createSlug(text: string): string {
+  return text.toLowerCase()
+    .replace(/[^\w ]+/g, '')
+    .replace(/ +/g, '-');
+}
+
+// Generate PDF file name
+export function generateCVFileName(cv: CV, format: ExportFormat | 'txt' = 'pdf'): string {
+  const name = cv.personalInfo.firstName && cv.personalInfo.lastName
+    ? `${cv.personalInfo.firstName}-${cv.personalInfo.lastName}-CV`
+    : 'CV';
+  
+  const slug = createSlug(name);
+  return `${slug}.${format.toLowerCase()}`;
+}
+
+// Extract text content from a PDF file
+export async function extractTextFromPDF(file: File): Promise<string> {
+  // This is a placeholder - in a real implementation, you would use 
+  // a library like pdf.js to extract text content
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve('Sample extracted text content from PDF');
+    }, 1000);
+  });
+}
+
+// Parse extracted text into CV data
+export function parseExtractedText(text: string, userId: string): Partial<CV> {
+  // This is a placeholder - in a real implementation, you would use 
+  // NLP or a dedicated service to parse CV data
+  return {
+    id: uuidv4(),
+    userId,
+    name: 'Imported CV',
+    template: 'Professional',
+    personalInfo: {
+      firstName: 'Imported',
+      lastName: 'CV',
+      title: 'Extracted Position',
+      email: 'example@example.com',
+      phone: '',
+      summary: text.substring(0, 200) + '...',
+    },
+  };
+}
+
+// Download CV in various formats (PDF, DOCX, JPG)
+export function downloadCV(cv: CV, format: ExportFormat = 'pdf'): void {
+  // First generate the CV content in HTML format for better styling
+  const cvHtml = generateCVHTML(cv);
+  
+  // Create a temporary container to render the CV
+  const container = document.createElement('div');
+  container.innerHTML = cvHtml;
+  container.style.width = '8.5in';
+  container.style.padding = '0.5in';
+  container.style.backgroundColor = 'white';
+  container.style.position = 'fixed';
+  container.style.top = '-9999px';
+  document.body.appendChild(container);
+  
+  // Process according to the requested format
+  switch(format.toLowerCase()) {
+    case 'pdf':
+      exportAsPDF(container, cv);
+      break;
+    case 'docx':
+      exportAsDOCX(container, cv);
+      break;
+    case 'jpg':
+      exportAsJPG(container, cv);
+      break;
+    default:
+      exportAsPDF(container, cv);
+  }
+  
+  // Clean up the temporary container after a delay
+  setTimeout(() => {
+    document.body.removeChild(container);
+  }, 1000);
+}
+
+// Generate HTML representation of the CV
+function generateCVHTML(cv: CV): string {
+  return `
+    <div style="font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto;">
+      <div style="text-align: center; margin-bottom: 20px;">
+        <h1 style="margin-bottom: 5px;">${cv.personalInfo.firstName} ${cv.personalInfo.lastName}</h1>
+        <h2 style="margin-top: 0; color: #555;">${cv.personalInfo.title}</h2>
+        <p>${cv.personalInfo.email} | ${cv.personalInfo.phone}</p>
+      </div>
+      
+      <div style="margin-bottom: 20px;">
+        <h3 style="border-bottom: 1px solid #ccc; padding-bottom: 5px;">Summary</h3>
+        <p>${cv.personalInfo.summary}</p>
+      </div>
+      
+      <div style="margin-bottom: 20px;">
+        <h3 style="border-bottom: 1px solid #ccc; padding-bottom: 5px;">Experience</h3>
+        ${cv.experience.map(exp => `
+          <div style="margin-bottom: 15px;">
+            <h4 style="margin-bottom: 5px;">${exp.position} at ${exp.company}</h4>
+            <p style="margin-top: 0; color: #555;">${formatDate(exp.startDate)} - ${exp.isCurrent ? 'Present' : formatDate(exp.endDate)}</p>
+            <p>${exp.description}</p>
+          </div>
+        `).join('')}
+      </div>
+      
+      <div style="margin-bottom: 20px;">
+        <h3 style="border-bottom: 1px solid #ccc; padding-bottom: 5px;">Education</h3>
+        ${cv.education.map(edu => `
+          <div style="margin-bottom: 15px;">
+            <h4 style="margin-bottom: 5px;">${edu.degree} in ${edu.field}</h4>
+            <p style="margin-top: 0;">${edu.institution}</p>
+            <p style="margin-top: 0; color: #555;">${formatDate(edu.startDate)} - ${formatDate(edu.endDate)}</p>
+          </div>
+        `).join('')}
+      </div>
+      
+      <div>
+        <h3 style="border-bottom: 1px solid #ccc; padding-bottom: 5px;">Skills</h3>
+        <p>${cv.skills.map(skill => skill.name).join(', ')}</p>
+      </div>
+      
+      ${cv.languages && cv.languages.length > 0 ? `
+      <div>
+        <h3 style="border-bottom: 1px solid #ccc; padding-bottom: 5px;">Languages</h3>
+        <ul>
+          ${cv.languages.map(lang => `
+            <li>${lang.name} - ${lang.proficiency}</li>
+          `).join('')}
+        </ul>
+      </div>
+      ` : ''}
+      
+      ${cv.references && cv.references.length > 0 ? `
+      <div>
+        <h3 style="border-bottom: 1px solid #ccc; padding-bottom: 5px;">References</h3>
+        ${cv.references.map(ref => `
+          <div style="margin-bottom: 15px;">
+            <h4 style="margin-bottom: 5px;">${ref.name}</h4>
+            <p style="margin-top: 0;">${ref.relation || 'Reference'}</p>
+            <p style="margin-top: 0;">${ref.email} | ${ref.phone}</p>
+          </div>
+        `).join('')}
+      </div>
+      ` : ''}
+    </div>
+  `;
+}
+
+// Export as PDF
+function exportAsPDF(container: HTMLElement, cv: CV): void {
+  const options = {
+    margin: [0.5, 0.5, 0.5, 0.5],
+    filename: generateCVFileName(cv, 'pdf'),
+    image: { type: 'jpeg', quality: 0.98 },
+    html2canvas: { scale: 2, useCORS: true },
+    jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+  };
+  
+  html2pdf().from(container).set(options).save();
+}
+
+// Export as DOCX
+function exportAsDOCX(container: HTMLElement, cv: CV): void {
+  // Create a new document
+  const doc = new Document({
+    sections: [
+      {
+        properties: {},
+        children: [
+          new Paragraph({
+            text: `${cv.personalInfo.firstName} ${cv.personalInfo.lastName}`,
+            heading: HeadingLevel.HEADING_1,
+            alignment: AlignmentType.CENTER
+          }),
+          
+          new Paragraph({
+            text: cv.personalInfo.title,
+            heading: HeadingLevel.HEADING_2,
+            alignment: AlignmentType.CENTER
+          }),
+          
+          new Paragraph({
+            text: `${cv.personalInfo.email} | ${cv.personalInfo.phone}`,
+            alignment: AlignmentType.CENTER,
+            spacing: { after: 400 }
+          }),
+          
+          new Paragraph({
+            text: 'Summary',
+            heading: HeadingLevel.HEADING_3
+          }),
+          
+          new Paragraph({ text: cv.personalInfo.summary, spacing: { after: 400 } }),
+          
+          new Paragraph({
+            text: 'Experience',
+            heading: HeadingLevel.HEADING_3
+          }),
+          
+          ...cv.experience.flatMap(exp => [
+            new Paragraph({ 
+              text: `${exp.position} at ${exp.company}`,
+              heading: HeadingLevel.HEADING_4
+            }),
+            new Paragraph({ 
+              text: `${formatDate(exp.startDate)} - ${exp.isCurrent ? 'Present' : formatDate(exp.endDate)}`,
+              spacing: { after: 200 }
+            }),
+            new Paragraph({ text: exp.description, spacing: { after: 400 } })
+          ]),
+          
+          new Paragraph({
+            text: 'Education',
+            heading: HeadingLevel.HEADING_3
+          }),
+          
+          ...cv.education.flatMap(edu => [
+            new Paragraph({ 
+              text: `${edu.degree} in ${edu.field}`,
+              heading: HeadingLevel.HEADING_4
+            }),
+            new Paragraph({ text: edu.institution }),
+            new Paragraph({ 
+              text: `${formatDate(edu.startDate)} - ${formatDate(edu.endDate)}`, 
+              spacing: { after: 400 }
+            })
+          ]),
+          
+          new Paragraph({
+            text: 'Skills',
+            heading: HeadingLevel.HEADING_3
+          }),
+          
+          new Paragraph({ text: cv.skills.map(skill => skill.name).join(', ') })
+        ]
+      }
+    ]
+  });
+
+  // Generate and save the document
+  Packer.toBlob(doc).then(blob => {
+    saveAs(blob, generateCVFileName(cv, 'docx'));
+  });
+}
+
+// Export as JPG
+function exportAsJPG(container: HTMLElement, cv: CV): void {
+  html2canvas(container, { scale: 2, logging: false, useCORS: true }).then(canvas => {
+    canvas.toBlob(blob => {
+      if (blob) {
+        saveAs(blob, generateCVFileName(cv, 'jpg'));
+      }
+    }, 'image/jpeg', 0.95);
+  });
+}
+
+// Share CV via email
+export function shareCV(cv: CV, email: string): void {
+  // This is a placeholder - in a real implementation, you would 
+  // implement sharing functionality with the provided email
+  
+  const subject = `Check out my CV - ${cv.personalInfo.firstName} ${cv.personalInfo.lastName}`;
+  const body = `
+    I wanted to share my CV with you.
+    
+    Name: ${cv.personalInfo.firstName} ${cv.personalInfo.lastName}
+    Title: ${cv.personalInfo.title}
+    
+    [CV content would be attached or linked here]
+  `;
+  
+  window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}

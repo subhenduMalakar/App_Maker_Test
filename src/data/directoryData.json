@@ -1,0 +1,245 @@
+[
+  {
+    "id": 1,
+    "name": "Mountain View Coffee Shop",
+    "category": "Best Cafe",
+    "description": "A cozy coffee shop with mountain views and fresh pastries daily. Our signature roasts come from locally sourced beans and we pride ourselves on sustainable practices. Join us for live music every Friday evening and poetry readings on Sunday afternoons.",
+    "address": "123 Alpine Road, Mountain View",
+    "phone": "(555) 123-4567",
+    "website": "www.mountainviewcoffee.com",
+    "email": "info@mountainviewcoffee.com",
+    "image": "https://lh3.googleusercontent.com/p/AF1QipOzcJJNMpeBAB8SkMQ4MYpIGOdeWXuN7kLayRY9=w292-h196-n-k-no",
+    "rating": 4.5,
+    "hours": "Mon-Fri: 7am-7pm, Sat-Sun: 8am-6pm",
+    "features": ["Free WiFi 100%", "Outdoor Seating", "Vegan Options", "Pet Friendly"],
+    "priceRange": "$$",
+    "yearEstablished": 2015,
+    "socialMedia": {
+      "facebook": "facebook.com/mountainviewcoffee",
+      "instagram": "instagram.com/mountainviewcoffee"
+    },
+    "location": {
+      "lat": 37.386051,
+      "lng": -122.083855
+    }
+  },
+  {
+    "id": 2,
+    "name": "Tech Innovations Inc.",
+    "category": "Technology",
+    "description": "Leading technology company specializing in AI and machine learning solutions. Our team of experts develops cutting-edge software for businesses of all sizes. We offer consultation services, custom software development, and ongoing support for all your technology needs.",
+    "address": "456 Tech Blvd, Silicon Valley",
+    "phone": "(555) 987-6543",
+    "website": "www.techinnovationsinc.com",
+    "email": "contact@techinnovationsinc.com",
+    "image": "https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    "rating": 4.8,
+    "hours": "Mon-Fri: 9am-5pm",
+    "features": ["Free Consultation", "24/7 Support", "Agile Development", "Cloud Services"],
+    "priceRange": "$$$",
+    "yearEstablished": 2010,
+    "socialMedia": {
+      "linkedin": "linkedin.com/techinnovations",
+      "twitter": "twitter.com/techinnovations"
+    },
+    "location": {
+      "lat": 37.774929,
+      "lng": -122.419418
+    }
+  },
+  {
+    "id": 3,
+    "name": "Green Leaf Restaurant",
+    "category": "Restaurant",
+    "description": "Farm-to-table restaurant offering organic dishes and craft cocktails. Our menu changes seasonally to showcase the freshest local ingredients. Chef Maria Rodriguez brings her international culinary experience to create unforgettable dining experiences in our eco-friendly space.",
+    "address": "789 Garden Lane, Greenville",
+    "phone": "(555) 456-7890",
+    "website": "www.greenleafrestaurant.com",
+    "email": "eat@greenleafrestaurant.com",
+    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    "rating": 4.7,
+    "hours": "Tue-Sun: 11am-10pm, Closed Mondays",
+    "features": ["Organic", "Locally Sourced", "Vegan Options", "Gluten-Free Options"],
+    "priceRange": "$$$",
+    "yearEstablished": 2018,
+    "socialMedia": {
+      "instagram": "instagram.com/greenleafrestaurant",
+      "facebook": "facebook.com/greenleafrestaurant"
+    },
+    "location": {
+      "lat": 37.804363,
+      "lng": -122.271111
+    }
+  },
+  {
+    "id": 4,
+    "name": "Fitness First Gym",
+    "category": "Fitness",
+    "description": "Modern gym with state-of-the-art equipment and expert personal trainers. Our facilities include a full range of cardio equipment, free weights, and dedicated spaces for group classes. We offer personalized fitness plans and nutrition coaching to help you achieve your goals.",
+    "address": "101 Muscle Road, Fitnessville",
+    "phone": "(555) 789-0123",
+    "website": "www.fitnessfirstgym.com",
+    "email": "train@fitnessfirstgym.com",
+    "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    "rating": 4.6,
+    "hours": "Mon-Sun: 5am-11pm",
+    "features": ["Personal Training", "Group Classes", "Pool", "Sauna"],
+    "priceRange": "$$",
+    "yearEstablished": 2012,
+    "socialMedia": {
+      "instagram": "instagram.com/fitnessfirst",
+      "facebook": "facebook.com/fitnessfirst",
+      "twitter": "twitter.com/fitnessfirst"
+    },
+    "location": {
+      "lat": 37.793579,
+      "lng": -122.396460
+    }
+  },
+  {
+    "id": 5,
+    "name": "Bookworm's Paradise",
+    "category": "Bookstore",
+    "description": "Cozy bookstore with rare finds and a reading cafe. Our carefully curated collection includes bestsellers, classics, indie publications, and an extensive children's section. Join our monthly book club or attend author signings and literary events in our community space.",
+    "address": "222 Reader's Lane, Booktown",
+    "phone": "(555) 234-5678",
+    "website": "www.bookwormsparadise.com",
+    "email": "books@bookwormsparadise.com",
+    "image": "https://images.unsplash.com/photo-1521123845560-14093637aa7d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    "rating": 4.9,
+    "hours": "Mon-Sat: 10am-9pm, Sun: 11am-7pm",
+    "features": ["Reading Cafe", "Book Club", "Author Events", "Special Orders"],
+    "priceRange": "$$",
+    "yearEstablished": 2005,
+    "socialMedia": {
+      "instagram": "instagram.com/bookwormsparadise",
+      "facebook": "facebook.com/bookwormsparadise"
+    },
+    "location": {
+      "lat": 37.859619,
+      "lng": -122.484783
+    }
+  },
+  {
+    "id": 6,
+    "name": "Ocean View Hotel",
+    "category": "Hotel",
+    "description": "Luxury beachfront hotel with panoramic ocean views and premium amenities. Each of our spacious rooms features floor-to-ceiling windows overlooking the Pacific Ocean. Guests enjoy access to our infinity pool, full-service spa, and award-winning seafood restaurant.",
+    "address": "333 Coastal Highway, Beachside",
+    "phone": "(555) 345-6789",
+    "website": "www.oceanviewhotel.com",
+    "email": "reservations@oceanviewhotel.com",
+    "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    "rating": 4.7,
+    "hours": "Open 24/7",
+    "features": ["Room Service", "Spa", "Pool", "Ocean View"],
+    "priceRange": "$$$$",
+    "yearEstablished": 2008,
+    "socialMedia": {
+      "instagram": "instagram.com/oceanviewhotel",
+      "facebook": "facebook.com/oceanviewhotel",
+      "twitter": "twitter.com/oceanviewhotel"
+    },
+    "location": {
+      "lat": 37.828207,
+      "lng": -122.482650
+    }
+  },
+  {
+    "id": 7,
+    "name": "Tech Academy",
+    "category": "Education",
+    "description": "Leading coding bootcamp offering intensive programs in web development, data science, and UX design. Our industry-experienced instructors provide hands-on training with real-world projects. Career services include interview preparation, resume building, and job placement assistance.",
+    "address": "555 Learning Ave, Techtown",
+    "phone": "(555) 123-9876",
+    "website": "www.techacademy.edu",
+    "email": "admissions@techacademy.edu",
+    "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    "rating": 4.8,
+    "hours": "Mon-Fri: 8am-8pm, Sat: 9am-5pm",
+    "features": ["Career Services", "Industry Partners", "Financing Options", "Live Projects"],
+    "priceRange": "$$$",
+    "yearEstablished": 2014,
+    "socialMedia": {
+      "linkedin": "linkedin.com/techacademy",
+      "twitter": "twitter.com/techacademy",
+      "instagram": "instagram.com/techacademy"
+    },
+    "location": {
+      "lat": 37.785834,
+      "lng": -122.406417
+    }
+  },
+  {
+    "id": 8,
+    "name": "Medical Center Plus",
+    "category": "Health",
+    "description": "Comprehensive healthcare facility with specialty departments and advanced diagnostic equipment. Our team of experienced physicians and healthcare professionals provides personalized care for the whole family. We offer preventive care, chronic disease management, and specialized treatments.",
+    "address": "777 Wellness Blvd, Healthyville",
+    "phone": "(555) 987-1234",
+    "website": "www.medicalcenterplus.com",
+    "email": "info@medicalcenterplus.com",
+    "image": "https://images.unsplash.com/photo-1504439904031-93ded9f93e4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    "rating": 4.6,
+    "hours": "Mon-Fri: 8am-6pm, Sat: 9am-1pm",
+    "features": ["Primary Care", "Telehealth", "Lab Services", "Pediatrics"],
+    "priceRange": "$$$",
+    "yearEstablished": 2000,
+    "socialMedia": {
+      "facebook": "facebook.com/medicalcenterplus"
+    },
+    "location": {
+      "lat": 37.782429,
+      "lng": -122.421490
+    }
+  },
+  {
+    "id": 9,
+    "name": "Urban Garden Supply",
+    "category": "Shopping",
+    "description": "Complete gardening store with plants, tools, and expert advice for urban gardeners. Whether you're looking to start a windowsill herb garden or transform your rooftop into an oasis, our knowledgeable staff can help select the right plants and supplies for your space.",
+    "address": "888 Green Thumb St, Plantville",
+    "phone": "(555) 456-7123",
+    "website": "www.urbangardensupply.com",
+    "email": "grow@urbangardensupply.com",
+    "image": "https://images.unsplash.com/photo-1525498128493-380d1990a112?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    "rating": 4.5,
+    "hours": "Mon-Sat: 9am-7pm, Sun: 10am-5pm",
+    "features": ["Organic Seeds", "Gardening Workshops", "Indoor Plants", "Delivery"],
+    "priceRange": "$$",
+    "yearEstablished": 2016,
+    "socialMedia": {
+      "instagram": "instagram.com/urbangardensupply",
+      "pinterest": "pinterest.com/urbangardensupply"
+    },
+    "location": {
+      "lat": 37.771151,
+      "lng": -122.402675
+    }
+  },
+  {
+    "id": 10,
+    "name": "Skyline Cinema",
+    "category": "Entertainment",
+    "description": "Modern movie theater featuring the latest releases in premium comfort with state-of-the-art sound and projection. Our luxurious reclining seats and gourmet concession offerings elevate the traditional movie-going experience. Members enjoy special screenings and exclusive events.",
+    "address": "999 Movie Lane, Filmtown",
+    "phone": "(555) 789-3456",
+    "website": "www.skylinecinema.com",
+    "email": "tickets@skylinecinema.com",
+    "image": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    "rating": 4.7,
+    "hours": "Mon-Sun: 11am-11pm",
+    "features": ["IMAX", "Reclining Seats", "Premium Audio", "Bar & Lounge"],
+    "priceRange": "$$",
+    "yearEstablished": 2019,
+    "socialMedia": {
+      "instagram": "instagram.com/skylinecinema",
+      "facebook": "facebook.com/skylinecinema",
+      "twitter": "twitter.com/skylinecinema"
+    },
+    "location": {
+      "lat": 37.794120,
+      "lng": -122.404366
+    }
+  }
+]

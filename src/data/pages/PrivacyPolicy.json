@@ -1,0 +1,46 @@
+{
+  "pageTitle": "Dummy Privacy Policy Title",
+  "metaDescription": "Dummy meta description for privacy policy.",
+  "mainHeading": "Dummy Privacy Policy Heading",
+  "sections": [
+    {
+      "heading": "Dummy Section 1 Heading",
+      "paragraphs": [
+        "Dummy paragraph 1 for section 1.",
+        "Dummy paragraph 2 for section 1."
+      ]
+    },
+    {
+      "heading": "Dummy Section 2 Heading",
+      "paragraphs": [
+        "Dummy paragraph 1 for section 2."
+      ]
+    },
+    {
+      "heading": "Dummy Section 3 Heading",
+      "paragraphs": [
+        "Dummy paragraph 1 for section 3."
+      ]
+    },
+    {
+      "heading": "Dummy Section 4 Heading",
+      "paragraphs": [
+        "Dummy paragraph 1 for section 4."
+      ]
+    },
+    {
+      "heading": "Dummy Section 5 Heading",
+      "paragraphs": [
+        "Dummy paragraph 1 for section 5."
+      ]
+    },
+    {
+      "heading": "Dummy Section 6 Heading",
+      "paragraphs": [
+        "Dummy paragraph 1 for section 6."
+      ]
+    }
+  ],
+  "contactText": "Dummy contact text for privacy policy.",
+  "contactEmail": "dummy.privacy@example.com"
+}

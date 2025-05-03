@@ -1,0 +1,18 @@
+{
+  "pageTitle": "Contact Us",
+  "metaDescription": "Get in touch with Dummy Company.",
+  "mainHeading": "Get in Touch with Us",
+  "introParagraph": "If you have any questions, feedback, or inquiries, please feel free to contact us using the information below or the contact form.",
+  "contactInfoHeading": "Contact Information",
+  "email": "dummy.contact@example.com",
+  "phone": "(123) 456-7890",
+  "address": "Dummy Address Line 1, Dummy City, Dummy State, 12345",
+  "contactFormHeading": "Contact Form (Placeholder)",
+  "contactFormPlaceholderText": "Please note: This is a placeholder. A functional contact form would require backend implementation.",
+  "formLabels": {
+    "name": "Name:",
+    "email": "Email:",
+    "message": "Message:"
+  },
+  "formButtonText": "Send Message"
+}

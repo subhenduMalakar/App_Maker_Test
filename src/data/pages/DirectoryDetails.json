@@ -1,0 +1,13 @@
+{
+  "notFoundTitle": "Dummy Item Not Found Title",
+  "notFoundMessage": "Dummy message for item not found.",
+  "returnButtonText": "Dummy Return Button Text",
+  "backButtonText": "Dummy Back Button Text",
+  "aboutHeading": "Dummy About Heading",
+  "featuresHeading": "Dummy Features Heading",
+  "contactInfoHeading": "Dummy Contact Information Heading",
+  "addressLabel": "Dummy Address Label:",
+  "hoursHeading": "Dummy Hours Heading",
+  "socialMediaHeading": "Dummy Social Media Heading",
+  "contactButtonText": "Dummy Contact Button Text"
+}

@@ -18,6 +18,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Slider } from '@/components/ui/slider';
 import { Switch } from '@/components/ui/switch';
 import { useState } from 'react';
+import DocumentUploadViewer from '@/components/DocumentUploadViewer';
 
 const AIStoryGenerator: NextPage = () => {  const [prompt, setPrompt] = useState("");
   const [generatedStory, setGeneratedStory] = useState("");

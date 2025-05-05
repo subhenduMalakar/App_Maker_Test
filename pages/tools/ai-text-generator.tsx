@@ -16,8 +16,10 @@ import {
 } from '@/components/ui/select';
 import { Slider } from '@/components/ui/slider';
 import { useState } from 'react';
+import DocumentUploadViewer from '@/components/DocumentUploadViewer';
 
-const AITextGenerator: NextPage = () => {  const [prompt, setPrompt] = useState("");
+const AITextGenerator: NextPage = () => {
+  const [prompt, setPrompt] = useState("");
   const [generatedText, setGeneratedText] = useState("");
   const [isGenerating, setIsGenerating] = useState(false);
   const [textLength, setTextLength] = useState<number[]>([500]);
@@ -35,6 +37,7 @@ const AITextGenerator: NextPage = () => {  const [prompt, setPrompt] = useState(
       }, 1500);
     }
   };
+  
   return (
     <ToolsLayout>
       <Head>
@@ -166,7 +169,11 @@ const AITextGenerator: NextPage = () => {  const [prompt, setPrompt] = useState(
                 </CardContent>
               </Card>
             </div>
-          </div>        </div>
+          </div>
+        </div>
+        
+        {/* Document Upload and Viewer */}
+        <DocumentUploadViewer />
       </div>
     </ToolsLayout>
   );

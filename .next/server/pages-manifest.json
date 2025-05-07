@@ -2,13 +2,8 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/404": "pages/404.js",
-  "/tools/free-ai-voice": "pages/tools/free-ai-voice.js",
-  "/": "pages/index.js",
   "/tools/documents": "pages/tools/documents.js",
-  "/tools/ai-story-generator": "pages/tools/ai-story-generator.js",
-  "/tools/ai-text-generator": "pages/tools/ai-text-generator.js",
-  "/tools/spreadsheets": "pages/tools/spreadsheets.js",
-  "/tools/presentations": "pages/tools/presentations.js",
-  "/tools/images": "pages/tools/images.js"
+  "/": "pages/index.js",
+  "/tools/free-ai-document": "pages/tools/free-ai-document.js",
+  "/auth": "pages/auth.js"
 }

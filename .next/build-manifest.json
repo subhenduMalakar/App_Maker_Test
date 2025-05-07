@@ -17,11 +17,6 @@
       "static/chunks/main.js",
       "static/chunks/pages/index.js"
     ],
-    "/404": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/404.js"
-    ],
     "/_app": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
@@ -32,40 +27,20 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/tools/ai-story-generator": [
+    "/auth": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/tools/ai-story-generator.js"
-    ],
-    "/tools/ai-text-generator": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/tools/ai-text-generator.js"
+      "static/chunks/pages/auth.js"
     ],
     "/tools/documents": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/tools/documents.js"
     ],
-    "/tools/free-ai-voice": [
+    "/tools/free-ai-document": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/tools/free-ai-voice.js"
-    ],
-    "/tools/images": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/tools/images.js"
-    ],
-    "/tools/presentations": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/tools/presentations.js"
-    ],
-    "/tools/spreadsheets": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/tools/spreadsheets.js"
+      "static/chunks/pages/tools/free-ai-document.js"
     ]
   },
   "ampFirstPages": []

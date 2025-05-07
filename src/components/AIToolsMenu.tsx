@@ -13,10 +13,12 @@ import {
   Terminal
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useToolsConfig } from "@/hooks/use-tools-config";
 
 const AIToolsMenu = () => {
   const router = useRouter();
   const currentPath = router.pathname;
+  const { isToolEnabled, isSectionEnabled } = useToolsConfig();
 
   // Define tools array to easily map through items
   const tools = [
@@ -61,11 +63,16 @@ const AIToolsMenu = () => {
       icon: <BookText className="h-4 w-4" />
     }
   ];
-
   return (
     <div className="w-56">
       <ul className="flex flex-col space-y-1">
-        {tools.map((tool, index) => (
+        {isSectionEnabled('aiTools') && tools
+          .filter(tool => {
+            // Extract the ID from path
+            const id = tool.path.split('/').pop() || '';
+            return isToolEnabled(id);
+          })
+          .map((tool, index) => (
           <li key={index}>
             <Link href={tool.path} className={cn(
               "flex items-center px-3 py-2 text-sm rounded-md hover:bg-gray-100 text-gray-700",

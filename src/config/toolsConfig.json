@@ -29,14 +29,14 @@
       }
     },
     "freeAiTools": {
-      "enabled": false,
+      "enabled": true,
       "categories": {
         "documentsText": {
           "enabled": true,
           "items": {
-            "freeAiDocument": true,
-            "freeAiText": true,
-            "freeAiEmail": true,
+            "freeAiDocument": false,
+            "freeAiText": false,
+            "freeAiEmail": false,
             "freeAiStory": true
           }
         },
@@ -50,8 +50,8 @@
         "dataMedia": {
           "enabled": true,
           "items": {
-            "freeAiVoice": true,
-            "freeAiSpreadsheet": true
+            "freeAiVoice": false,
+            "freeAiSpreadsheet": false
           }
         }
       }

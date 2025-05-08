@@ -414,7 +414,7 @@ module.exports = require("zlib");
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"tools":{"aiTools":{"enabled":true,"categories":{"documentTools":{"enabled":true,"items":{"documents":true,"aiTextGenerator":false,"aiStoryGenerator":false}},"presentationVisual":{"enabled":false,"items":{"presentations":false,"images":false}},"dataCommunication":{"enabled":false,"items":{"spreadsheets":false,"voiceovers":false,"chat":false}}}},"freeAiTools":{"enabled":false,"categories":{"documentsText":{"enabled":true,"items":{"freeAiDocument":true,"freeAiText":true,"freeAiEmail":true,"freeAiStory":true}},"visualPresentation":{"enabled":true,"items":{"freeAiPresentation":true,"freeAiImage":true}},"dataMedia":{"enabled":true,"items":{"freeAiVoice":true,"freeAiSpreadsheet":true}}}}}}');
+module.exports = JSON.parse('{"tools":{"aiTools":{"enabled":true,"categories":{"documentTools":{"enabled":true,"items":{"documents":true,"aiTextGenerator":false,"aiStoryGenerator":false}},"presentationVisual":{"enabled":false,"items":{"presentations":false,"images":false}},"dataCommunication":{"enabled":false,"items":{"spreadsheets":false,"voiceovers":false,"chat":false}}}},"freeAiTools":{"enabled":true,"categories":{"documentsText":{"enabled":true,"items":{"freeAiDocument":false,"freeAiText":false,"freeAiEmail":false,"freeAiStory":true}},"visualPresentation":{"enabled":true,"items":{"freeAiPresentation":true,"freeAiImage":true}},"dataMedia":{"enabled":true,"items":{"freeAiVoice":false,"freeAiSpreadsheet":false}}}}}}');
 
 /***/ })
 

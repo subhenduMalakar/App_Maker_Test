@@ -5,6 +5,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import { useAuth } from '@/context/AuthContext';
+import { useToolsConfig } from '@/hooks/use-tools-config';
 import siteConfig from "@/config/siteConfig.json";
 import { 
   ArrowRight, 
@@ -20,7 +21,10 @@ import {
 
 export default function Home() {
   const router = useRouter();
-  const { user } = useAuth();  const features = [
+  const { user } = useAuth();  
+  const { isToolEnabled } = useToolsConfig();
+  
+  const features = [
     {
       icon: <FileText className="h-10 w-10 text-purple-600" />,
       title: "Free AI Document Creator",
@@ -124,7 +128,13 @@ export default function Home() {
           <h2 className="text-3xl font-bold text-center mb-4">Free AI Tools Suite</h2>
           <p className="text-center text-gray-600 mb-12 max-w-3xl mx-auto">Unlock the power of AI with our comprehensive collection of 100% free tools designed to enhance your productivity and creativity.</p>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {features.map((feature, index) => (
+            {features
+              .filter(tool => {
+                // Extract the ID from path
+                const id = tool.path.split('/').pop() || '';
+                return isToolEnabled(id);
+              })
+              .map((feature, index) => (
               <Card key={index} className="p-5 hover:shadow-md transition-shadow border-t-4 border-t-blue-500">
                 <div className="mb-3">{feature.icon}</div>
                 <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>

@@ -4,6 +4,5 @@
   "/_document": "pages/_document.js",
   "/tools/documents": "pages/tools/documents.js",
   "/": "pages/index.js",
-  "/tools/free-ai-document": "pages/tools/free-ai-document.js",
-  "/auth": "pages/auth.js"
+  "/tools": "pages/tools.js"
 }

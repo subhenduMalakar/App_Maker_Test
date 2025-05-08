@@ -27,20 +27,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/auth": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/auth.js"
-    ],
     "/tools/documents": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/tools/documents.js"
-    ],
-    "/tools/free-ai-document": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/tools/free-ai-document.js"
     ]
   },
   "ampFirstPages": []
